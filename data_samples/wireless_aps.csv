@@ -1,0 +1,3 @@
+hostname,ip,location,ssid,status,clients,signal_dbm
+AP-CLUB-07,10.20.70.7,Founders Club,Arena-Guest,warning,86,-71
+AP-LOBBY-02,10.20.70.2,Main lobby,Arena-Guest,up,34,-54

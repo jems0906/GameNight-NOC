@@ -1,0 +1,3 @@
+provider,circuit_id,ticket_number,status,contact,sla_target,last_update
+AT&T,CIR-CHI-4401,ATT-982741,vendor investigating,NOC 1-800-555-0142,Response due 03:30 UTC,Provider sees elevated errors at the west handoff; field team reviewing optical levels.
+Comcast Business,CIR-CHI-8820,CB-331058,awaiting vendor,Enterprise desk 1-800-555-0177,Update due 04:00 UTC,Escalation submitted with interface counters and five-minute loss samples.

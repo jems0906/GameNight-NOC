@@ -1,0 +1,2 @@
+vm_name,cluster,power_state,status,cpu_pct,memory_pct,vmware_tools
+VM-BROADCAST-INGEST,Cluster A,On,up,38,67,Current

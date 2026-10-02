@@ -1,0 +1,3 @@
+provider,circuit_id,name,status,latency_ms,packet_loss_pct
+AT&T,CIR-CHI-4401,WAN-ARENA-PRI,warning,42,1.8
+Comcast,CIR-CHI-8820,WAN-ARENA-BACKUP,up,18,0

@@ -1,0 +1,4 @@
+number,title,category,impact,urgency,priority,status,owner,business_impact
+INC-2408,Ticketing sync server under load,Compute,multiple_departments,high,P1,investigating,M. Rivera,Ticketing back-office sync is delayed; box-office sales are unaffected.
+INC-2407,Primary circuit intermittent packet loss,Network,venue_wide,normal,P2,vendor engaged,J. Chen,Broadcast contribution path may experience intermittent degradation; backup circuit is healthy.
+INC-2406,Nightly backup job failed,Backup,department,normal,P3,acknowledged,A. Patel,Latest recovery point for the operations file share is older than target.

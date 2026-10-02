@@ -1,0 +1,5 @@
+severity,status,source,title,detail
+critical,investigating,TKT-SQL-01,Ticketing database CPU above 90%,CPU 94% for 12 minutes; ticketing sync latency increasing.
+warning,acknowledged,WAN-ARENA-PRI,Primary circuit packet loss elevated,1.8% loss over the last 5-minute interval.
+critical,new,BKUP-VM-DAILY,Backup job missed completion SLA,Nightly backup failed; recovery point objective at risk.
+info,new,AP-CLUB-07,Founders Club AP client load high,86 clients connected; signal at -71 dBm.

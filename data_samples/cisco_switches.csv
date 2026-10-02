@@ -1,0 +1,3 @@
+hostname,ip,location,status,ports_up,ports_total,interface_errors,vlans
+CORE-SW-01,10.20.0.11,MDF Level 1,up,46,48,0,"10;20;30;40"
+CONCOURSE-SW-14,10.20.14.14,IDF Section 114,warning,22,24,17,"10;20;30"
