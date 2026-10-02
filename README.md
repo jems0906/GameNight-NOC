@@ -98,10 +98,19 @@ npm run build
 
 ## Railway deployment
 
-1. Create a Railway project from this repository and add a Railway PostgreSQL database.
-2. Deploy the backend service using `backend/Dockerfile` with `backend` as its root/build directory. Set `DATABASE_URL` to the database service's connection URL.
-3. Deploy the frontend with `frontend/Dockerfile` and `frontend` as its root/build directory. Set the build argument `VITE_API_URL` to the public backend origin (for example `https://gamenight-api.up.railway.app`).
-4. Set backend `CORS_ORIGINS` to the public frontend origin. The default only allows local Vite development.
-5. Expose port 8080 for the frontend and the `$PORT`-aware backend. Confirm `/api/health` responds before opening the frontend.
+Railway IaC is defined in `.railway/railway.ts` for the `jems0906/GameNight-NOC` repository on `main`. It creates one PostgreSQL database and two GitHub-connected services rooted at `backend/` and `frontend/`. It references Railway-generated database and public-domain variables; no database credentials are stored in this repository.
 
-`railway.json` records the two Dockerfile services. Railway environment variables and generated public domains must be configured in the project dashboard; never commit production credentials.
+After pushing changes to GitHub and authenticating with the Railway CLI:
+
+```sh
+npm install
+railway init --name GameNight-NOC
+railway config plan
+railway config apply
+railway domain --service backend --port 8000
+railway domain --service frontend --port 8080
+```
+
+Review the plan before applying. It should create `postgres`, `backend`, and `frontend`. The IaC references set backend `DATABASE_URL` from the managed database, backend `CORS_ORIGINS` from the frontend public domain, and frontend `VITE_API_URL` from the backend public domain. The frontend URL is a Vite build-time variable, so allow its deployment to rebuild after domains are created. Verify the backend `/api/health` endpoint and then open the frontend domain.
+
+Railway credentials remain in Railway-managed variables. If a Railway project already exists, link it with `railway link` and inspect `railway config plan` carefully before applying changes.
