@@ -5,7 +5,7 @@ from pathlib import Path
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.models import Alert, Handoff, Incident, InfrastructureDevice, VendorTicket, utc_now
+from app.models import Alert, Incident, InfrastructureDevice, VendorTicket, utc_now
 from app.services import calculate_priority
 
 

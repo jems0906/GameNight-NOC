@@ -1,6 +1,3 @@
-from app.models import Incident
-
-
 IMPACT_ORDER = {"individual": 1, "department": 2, "multiple_departments": 3, "venue_wide": 4}
 URGENCY_ORDER = {"low": 1, "normal": 2, "high": 3, "critical": 4}
 
